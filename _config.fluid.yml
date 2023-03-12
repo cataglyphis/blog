@@ -728,7 +728,7 @@ post:
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus
-    type: valine
+    type: waline
 
 
 #---------------------------
@@ -789,8 +789,8 @@ gitalk:
 # Based on LeanCloud
 # See: https://valine.js.org/
 valine:
-  appId: 'slnvt01vxFMkkm2lVFamf8N2-MdYXbMMI'
-  appKey: 'xKqmZ21QOED1ABBowyZ6zYeB'
+  appId: ''
+  appKey: ''
   path: window.location.pathname
   placeholder:
   avatar: 'retro'
@@ -810,14 +810,16 @@ valine:
 # Derived from Valine, with self-hosted service and new features
 # See: https://waline.js.org/
 waline:
-  serverURL: ''
+  appId: 'slnvt01vxFMkkm2lVFamf8N2-MdYXbMMI'
+  appKey: 'xKqmZ21QOED1ABBowyZ6zYeB'
+  serverURL: 'https://waline-9c792py0j-cataglyphis.vercel.app'
   path: window.location.pathname
-  meta: ['nick', 'mail', 'link']
-  requiredMeta: ['nick']
+  meta: ['nick']
+  requiredMeta: []
   lang: 'zh-CN'
   emoji: ['https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo']
   dark: 'html[data-user-color-scheme="dark"]'
-  wordLimit: 0
+  wordLimit: 250
   pageSize: 10
 
 # 畅言 Changyan
