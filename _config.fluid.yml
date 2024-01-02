@@ -121,7 +121,7 @@ fun_features:
     height_px: 3
     color: "#29d"
     # See: https://github.com/rstacruz/nprogress
-    options: { showSpinner: false, trickleSpeed: 100 }
+    options: {showSpinner: false, trickleSpeed: 100}
 
 # 主题暗色模式，开启后菜单中会出现切换按钮，用户浏览器会存储切换选项，并且会遵循 prefers-color-scheme 自动切换
 # Theme dark mode. If enable, a switch button will appear on the menu, each of the visitor's browser will store his switch option
@@ -239,7 +239,7 @@ custom_css:
 
 # 网页访问统计
 # Analysis of website visitors
-web_analytics:  # 网页访问统计
+web_analytics: # 网页访问统计
   enable: false
 
   # 遵循访客浏览器"请勿追踪"的设置，如果开启则不统计其访问
@@ -272,7 +272,7 @@ web_analytics:  # 网页访问统计
   # 51.la 站点统计 ID
   # 51.la analytics
   # See: https://www.51.la/user/site/index
-  woyaola:  # 51.la 站点统计 ID，参见
+  woyaola: # 51.la 站点统计 ID，参见
 
   # 友盟/cnzz 站点统计 web_id
   # cnzz analytics
@@ -345,12 +345,12 @@ navbar:
   # 导航栏菜单，可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
   # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
   menu:
-    - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
-    - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
-    - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
-    - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
-    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
-    #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
+  - {key: "home", link: "/", icon: "iconfont icon-home-fill"}
+  - {key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill"}
+  - {key: "category", link: "/categories/", icon: "iconfont icon-category-fill"}
+  - {key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill"}
+  - {key: "about", link: "/about/", icon: "iconfont icon-user-fill",}
+  #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
 # Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files
@@ -423,11 +423,7 @@ open_graph:
 footer:
   # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
-  content: '
-    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
-    <i class="iconfont icon-love"></i>
-    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
-  '
+  content: '<a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> '
 
   # 展示网站的 PV、UV 统计数
   # Display website PV and UV statistics
@@ -719,7 +715,7 @@ post:
     specific: false
 
     # See: http://mermaid-js.github.io/mermaid/
-    options: { theme: 'default' }
+    options: {theme: 'default'}
 
   # 评论插件
   # Comment plugin
@@ -954,9 +950,9 @@ about:
   # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
   # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, The icon is no longer a link, but a hovering QR code
   icons:
-    - { class: "iconfont icon-github-fill", link: "https://github.com/cataglyphis", tip: "GitHub" }
-    # - { class: "iconfont icon-douban-fill", link: "https://douban.com", tip: "豆瓣" }
-    # - { class: "iconfont icon-wechat-fill", qrcode: "/img/favicon.png" }
+  - {class: "iconfont icon-github-fill", link: "https://github.com/cataglyphis", tip: "GitHub",}
+  # - { class: "iconfont icon-douban-fill", link: "https://douban.com", tip: "豆瓣" }
+  # - { class: "iconfont icon-wechat-fill", qrcode: "/img/favicon.png" }
 
 
 #---------------------------
@@ -998,24 +994,9 @@ links:
   # 友链的成员项
   # Member item of page
   items:
-    - {
-      title: "Fluid Blog",
-      intro: "主题博客",
-      link: "https://hexo.fluid-dev.com/",
-      avatar: "/img/favicon.png"
-    }
-    - {
-      title: "Fluid Docs",
-      intro: "主题使用指南",
-      link: "https://hexo.fluid-dev.com/docs/",
-      avatar: "/img/favicon.png"
-    }
-    - {
-      title: "Fluid Repo",
-      intro: "主题 GitHub 仓库",
-      link: "https://github.com/fluid-dev/hexo-theme-fluid",
-      avatar: "/img/favicon.png"
-    }
+  - {title: "Fluid Blog", intro: "主题博客", link: "https://hexo.fluid-dev.com/", avatar: "/img/favicon.png"}
+  - {title: "Fluid Docs", intro: "主题使用指南", link: "https://hexo.fluid-dev.com/docs/", avatar: "/img/favicon.png"}
+  - {title: "Fluid Repo", intro: "主题 GitHub 仓库", link: "https://github.com/fluid-dev/hexo-theme-fluid", avatar: "/img/favicon.png"}
 
   # 当成员头像加载失败时，替换为指定图片
   # When the member avatar fails to load, replace the specified image
